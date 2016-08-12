@@ -1,0 +1,26 @@
+{
+  "name": "angular_model",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madkraft/angular_model.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madkraft/angular_model/issues"
+  },
+  "homepage": "https://github.com/madkraft/angular_model#readme",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}

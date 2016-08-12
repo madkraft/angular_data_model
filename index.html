@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Cron</title>
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body ng-controller="MainController as ctrl">
+
+    <pre style="font-size: 14px">
+        {{ctrl.state | json}}
+    </pre>
+
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="src/module.js"></script>
+    <script type="text/javascript" src="src/controllers.js"></script>
+    <script type="text/javascript" src="src/directives.js"></script>
+    <script type="text/javascript" src="src/services.js"></script>
+</body>
+</html>
