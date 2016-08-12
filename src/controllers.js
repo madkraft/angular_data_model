@@ -1,15 +1,27 @@
 (function (app) {
 
-    app.controller('MainController', MainController);
+    'use strict';
 
-    MainController.$inject = ['BookService'];
-    function MainController(BookService) {
+    app.controller('EditableBookController', EditableBookController);
+    app.controller('BooksListController', BooksListController);
+
+    EditableBookController.$inject = ['booksManager'];
+    function EditableBookController(booksManager) {
         var ctrl = this;
 
-        BookService.load();
-        ctrl.book = BookService.getBook();
-        ctrl.book.deleteBook = BookService.deleteBook;
-        ctrl.book.updateBook = BookService.updateBook;
+        booksManager.getBook(1).then(function(book) {
+            ctrl.book = book;
+        });
+
+    }
+
+    BooksListController.$inject = ['booksManager'];
+    function BooksListController(booksManager) {
+        var ctrl = this;
+
+        booksManager.loadAllBooks().then(function(books) {
+            ctrl.books = books;
+        });
 
     }
 

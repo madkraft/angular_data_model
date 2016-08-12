@@ -1,5 +1,7 @@
 (function (app) {
 
+    'use strict';
+
     // app.directive('toggleSelected', toggleSelected);
 
 
