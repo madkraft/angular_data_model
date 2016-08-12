@@ -2,16 +2,16 @@
 
     app.controller('MainController', MainController);
 
-
-    function MainController() {
+    MainController.$inject = ['BookService'];
+    function MainController(BookService) {
         var ctrl = this;
 
-        ctrl.state = {
-            books: 'Yolo'
-        }
+        BookService.load();
+        ctrl.book = BookService.getBook();
+        ctrl.book.deleteBook = BookService.deleteBook;
+        ctrl.book.updateBook = BookService.updateBook;
 
-
-    };
+    }
 
 
 }(angular.module('app')));
