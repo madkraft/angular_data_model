@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-    <meta charset="UTF-8">
-    <title>Model Angular</title>
-    <link rel="stylesheet" href="/src/styles.css">
+  <meta charset="UTF-8">
+  <title>Angular Data Model</title>
 </head>
-<body ng-controller="BooksListController as ctrl">
+<body ng-controller="MainController as ctrl">
 
-    <p>Id: {{ctrl.book.id}}</p>
-    <p>Name: {{ctrl.book.name}}</p>
-    <p>Author: {{ctrl.book.author}}</p>
-    <p>Is Available: {{ ctrl.isAvailable() ? 'Yes' : 'No' }}</p>
+  <div ng-repeat="author in ctrl.list">
+    <a href="#0" ng-click="ctrl.selectQuote(author)">
+      {{author.name}}
+    </a>
+  </div>
 
+  <p>{{ctrl.quote}}</p>
 
-    <button ng-click="ctrl.book.deleteBook()">Delete</button>
-    <button ng-click="ctrl.book.updateBook()">Update</button>
-
-
-    <hr>
-    <pre style="font-size: 14px">
-        {{ctrl.book | json}}
-    </pre>
-
-    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
-    <script type="text/javascript" src="src/module.js"></script>
-    <script type="text/javascript" src="src/controllers.js"></script>
-    <script type="text/javascript" src="src/directives.js"></script>
-    <script type="text/javascript" src="src/services.js"></script>
-    <script type="text/javascript" src="src/booksManager.js"></script>
+  <script src="./vendor/angular.min.js"></script>
+  <script src="./module.js"></script>
+  <script src="./mainController.js"></script>
+  <script src="./modelService.js"></script>
 </body>
 </html>
