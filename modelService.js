@@ -6,6 +6,37 @@
   authorListModel.$inject = ['$rootScope']
   function authorListModel ($rootScope) {
 
+    // var Person = AmpersandModel.extend({
+    //     props: {
+    //       id: 'number',
+    //       name: 'string'
+    //   },
+    //   urlRoot: 'http://otherdomain.example.com/people'
+    // });
+
+
+    // var me = new Person({
+    //   firstName: 'Foo',
+    //   lastName: 'Bar'
+    // })
+
+    // model.save()
+
+    // model.fetch()
+    // var me = new Person({id: 123});
+    // me.fetch();
+
+    // Destroy
+    // var task = new Task({id: 123});
+    // task.destroy({
+    //     success: function () {
+    //         alert('Task destroyed!');
+    //     },
+    //     error: function () {
+    //         alert('There was an error destroying the task');
+    //     },
+    // });
+
     var fowler = {
       name: "Fowler",
       quote: "Any fool can write"

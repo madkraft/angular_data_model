@@ -20,6 +20,9 @@
     $scope.$on('authorModel::selectedAuthorUpdated', function(event, author) {
       ctrl.quote = author.quote
     })
+
+    ctrl.model = 'test'
+
   }
 
 })(angular.module('app'))
