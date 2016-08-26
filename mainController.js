@@ -3,8 +3,8 @@
 
   app.controller('MainController', MainController)
 
-  MainController.$inject = ['$scope', 'authorListModel']
-  function MainController ($scope, authorListModel) {
+  MainController.$inject = ['$scope', 'authorListModel', 'Person', 'Model']
+  function MainController ($scope, authorListModel, Person, Model) {
     var ctrl = this
 
     ctrl.list = authorListModel.list
@@ -20,6 +20,28 @@
     $scope.$on('authorModel::selectedAuthorUpdated', function(event, author) {
       ctrl.quote = author.quote
     })
+
+
+
+
+
+
+    // var me = new Person({
+    //   firstName: 'Anton',
+    //   lastName: 'Kostiuchkov',
+    //   age: 27
+    // })
+
+    // var friend = new Person({
+    //   firstName: 'Alex',
+    //   lastName: 'Dumi'
+    // })
+
+    // console.log(me)
+    // console.log(friend)
+
+
+
   }
 
 })(angular.module('app'))
