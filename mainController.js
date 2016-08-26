@@ -3,8 +3,8 @@
 
   app.controller('MainController', MainController)
 
-  MainController.$inject = ['$scope', 'authorListModel', 'Person', 'Model']
-  function MainController ($scope, authorListModel, Person, Model) {
+  MainController.$inject = ['$scope', 'authorListModel', 'Person']
+  function MainController ($scope, authorListModel, Person) {
     var ctrl = this
 
     ctrl.list = authorListModel.list
